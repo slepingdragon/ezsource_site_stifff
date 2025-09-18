@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Acquisition Automation Program RFP</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-area">
+      <span class="logo">EZSource</span>
+      <div class="title-block">
+        <h1>AI Acquisition Automation Program</h1>
+        <p class="subtitle">Request for Proposals (RFP) showcase</p>
+      </div>
+    </div>
+    <div class="cta-group">
+      <a class="pill-link" href="rfp.json" target="_blank" rel="noopener">View JSON</a>
+      <button id="copy-json" type="button" class="pill-link ghost">Copy JSON URL</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h2>Structured content, ready for automation</h2>
+        <p>This sample site hosts the complete RFP inside an addressable data box so workflow tools (including n8n) can fetch, transform, and operationalize the solicitation without manual scrubbing.</p>
+        <ul class="tagline-list">
+          <li>Human-friendly layout for easy reading</li>
+          <li>Machine-ready JSON served at <code>site1/rfp.json</code></li>
+          <li>Metadata and headings preserved for downstream routing</li>
+        </ul>
+      </div>
+      <aside class="meta-panel" id="rfp-meta"></aside>
+    </section>
+
+    <section class="rfp-wrapper">
+      <h2>RFP Content Capsule</h2>
+      <p class="rfp-note">The box below mirrors the JSON payload returned from <code>rfp.json</code>. Agents and flows can retrieve the same data via HTTP.</p>
+      <div id="rfp-box" class="rfp-box" data-source="rfp.json">
+        <div class="loading" id="rfp-loading">Loading RFP...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Need to plug into n8n? Point an HTTP Request node at the <a href="rfp.json" target="_blank" rel="noopener">rfp.json</a> endpoint and parse the <code>markdown</code> or <code>html</code> fields.</p>
+  </footer>
+</body>
+</html>
